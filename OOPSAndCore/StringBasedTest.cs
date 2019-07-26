@@ -7,15 +7,15 @@ namespace OOPSAndCore
 {
     class StringBasedTest
     {
-        private static void Main()
+        private static void Main1()
         {
             StringBasedTest obj = new StringBasedTest();
-            obj.SortString("kkksde");
+            //obj.SortString("kkksde");
             //obj.StringCompression();
             //obj.ReverseString("hey");
             //obj.GetUniqueCharacters();
             //obj.GetSwappedWord();
-            //obj.ReverseEachWordInSentance();
+            obj.ReverseWordInSentance();
             //obj.DSPriorityValidation();
             Console.ReadKey();
         }
@@ -193,6 +193,33 @@ namespace OOPSAndCore
                     sb.Append(charArr[i]);
                 }
                 sb.Append(" ");
+            }
+
+            Console.WriteLine(sb.ToString());
+
+            Console.ReadKey();
+        }
+
+        private void ReverseWordInSentance()
+        {
+            string testSentance = "This is the sentance which will be reversed";
+            StringBuilder sb = new StringBuilder();
+
+            string[] stringArr = testSentance.Split(' ');
+            //foreach (var str in stringArr)
+            //{
+            //    char[] charArr = str.ToCharArray();
+            //    for (int i = charArr.Length - 1; i >= 0; i--)
+            //    {
+            //        sb.Append(charArr[i]);
+            //    }
+            //    sb.Append(" ");
+            //}
+
+            //for (int j = 0; j < stringArr.Length; j++)
+            for (int j = stringArr.Length - 1; j >= 0; j--)
+            {
+                    sb.Append(stringArr[j] + " ");
             }
 
             Console.WriteLine(sb.ToString());
