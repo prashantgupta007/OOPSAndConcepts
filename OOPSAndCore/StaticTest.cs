@@ -9,28 +9,35 @@ namespace OOPSAndCore
     {
         public static void Main1()
         {
+            var a = 100;
+            dynamic b = a;
+            var c = b;
+            c = "";
             //NewClassTest1 objNewClassTest1 = new NewClassTest1();   // It will work fine(Check this class in ClassTest.cs)
             //objNewClassTest1.Sum(1, 2); 
 
 
             //Write the order of constructors calling of both of classes objects creation
-            Class1 objClass1 = new Class2();
-            Class2 objClass2 = new Class2();
-            
+            //Class1 objClass1 = new Class2();
+            //Class1 objClass1 = new Class2("");
+            Class1 objClass1 = new Class2("", "");
+            //Class2 objClass2 = new Class2();
+            //Class2 objClass2 = new Class2("");
+
             //StaticClass.StaticTestFunction();
-            ////StaticClass.StaticTestFunction("");
+            //StaticClass.StaticTestFunction("");
 
             //NonStaticClass.StaticTestFunction();
-            ////NonStaticClass.StaticTestFunction(); 
+            //NonStaticClass.StaticTestFunction(); 
 
             //NonStaticClass nsc = new NonStaticClass();
             //nsc.NonStaticTestFunction();
             //nsc = new NonStaticClass("paramerized constructor");
             //nsc.NonStaticTestFunction();
-            ////NonStaticClass.StaticTestFunction();
+            NonStaticClass.StaticTestFunction();
 
-            ////NonStaticClass nsc1 = new NonStaticClass("paramerized constructor");
-            ////nsc1.NonStaticTestFunction();
+            //NonStaticClass nsc1 = new NonStaticClass("paramerized constructor");
+            //nsc1.NonStaticTestFunction();
 
             Console.ReadKey();
         }
@@ -86,7 +93,7 @@ namespace OOPSAndCore
     }
     #endregion Non Static Class
 
-    
+
     #region Static Class
     ///<summary>
     /// Note 1: Static class can never have non static members because we can't create objects of static classes
@@ -97,10 +104,10 @@ namespace OOPSAndCore
     //static class StaticClass : AnotherStaticClass { // lines of codes}        // "Static classes can't derived from type. It must be derived from object"
 
     //public static class StaticClass { // lines of codes }  // this and below Both lines are correct just their access modifier is different
-    static class StaticClass                                 // Upper has public and it has default access modifier which is internal
+    static class StaticClass                             // below has public and it has default access modifier which is internal
     {
         ///<summary>
-        /// Error: It will throw an error that "access modifiers are not allowed on static constructors"
+        /// Error: It will give a compilation error that "access modifiers are not allowed on static constructors"
         /// </summary>
         //public static StaticClass()
         //{
@@ -125,6 +132,7 @@ namespace OOPSAndCore
         {
             Console.WriteLine("Inside Static Function of StaticClass with overloaded function");
         }
+
         ///<summary>
         /// Error: It will throw an error that "cannot declare instance member in a static class"
         /// </summary>
@@ -141,15 +149,15 @@ namespace OOPSAndCore
     //static class AnotherStaticClass : NonStaticClass { // lines of codes }       // this and below, both type of inheritance will throw and error
     //static class AnotherStaticClass : StaticClass    { // lines of codes}        // "Static classes can't derived from type. It must be derived from object"
     //public static class AnotherStaticClass  // this and below Both lines are correct just their access modifier is different
-    public static class AnotherStaticClass           // Upper has public and it has default access modifier which is internal
-    { 
-    
+    public static class AnotherStaticClass           // It has public and upper has default access modifier which is internal
+    {
+
     }
     #endregion Another Static Class
 
     //class AnotherNonStaticClass : AnotherStaticClass  //Error: 'OOPSAndCore.AnotherNonStaticClass': cannot derive from static class 'OOPSAndCore.AnotherStaticClass'
     //{ 
-    
+
     //}
 
     public class Class1
@@ -159,20 +167,35 @@ namespace OOPSAndCore
             Console.WriteLine("Inside default Constructor of Class1");
         }
 
+        public Class1(string param)
+        {
+            Console.WriteLine("Inside parameterized Constructor of Class1");
+        }
+
         static Class1()
         {
             Console.WriteLine("Inside static Constructor of Class1");
         }
     }
 
-    public class Class2: Class1
+    public class Class2 : Class1
     {
-         public Class2()
+        public Class2()
         {
             Console.WriteLine("Inside default Constructor of Class2");
         }
 
-         static Class2()
+        public Class2(string param)
+        {
+            Console.WriteLine("Inside parameterized Constructor of Class2");
+        }
+
+        public Class2(string param1, string praram2) : base("")
+        {
+            Console.WriteLine("Inside double parameterized Constructor of Class2");
+        }
+
+        static Class2()
         {
             Console.WriteLine("Inside static Constructor of Class2");
         }

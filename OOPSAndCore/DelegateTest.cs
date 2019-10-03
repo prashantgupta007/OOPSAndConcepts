@@ -25,7 +25,7 @@ namespace OOPSAndCore
             DelegateMethod obj = new DelegateMethod(objDelegateTest.Sum);   // It is Singlecast delegate
             int result = obj(5, 10);
             Console.WriteLine("Sum is:" + result);
-            result = obj(5,5);
+            result = obj(5, 5);
             Console.WriteLine("Sum is:" + result);
 
             //obj = new DelegateMethod(objDelegateTest.Sub);                // It is Singlecast delegate

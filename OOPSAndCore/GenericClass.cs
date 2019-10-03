@@ -14,6 +14,10 @@ namespace OOPSAndCore
             t = obj;
         }
 
+        public GenericClass()
+        {
+        }
+
         public void GetClassType()
         {
             Console.Write("\nType of class is: " + t.GetType());
@@ -38,6 +42,7 @@ namespace OOPSAndCore
             Console.ReadKey();
 
             //MyCustomList<int> intList = new MyCustomList<int>();
+            //int item = intList[0]; get item at any index
             //// Add two integers to list
             //intList.Add(1);
             //intList.Add(33);

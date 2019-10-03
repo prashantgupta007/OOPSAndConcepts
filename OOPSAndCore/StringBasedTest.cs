@@ -7,7 +7,7 @@ namespace OOPSAndCore
 {
     class StringBasedTest
     {
-        private static void Main()
+        private static void Main1()
         {
             StringBasedTest obj = new StringBasedTest();
             obj.SortString("kkksde");

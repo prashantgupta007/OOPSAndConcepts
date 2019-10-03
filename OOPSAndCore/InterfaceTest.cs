@@ -20,8 +20,8 @@ namespace OOPSAndCore
         {
             Console.WriteLine("Hi! Inside M1 method of Interface I1");
         }
-        
-        //public void I2.M()                                   //  I will give a error "The modifier 'public' is not valid for this item"
+
+        //void I2.M()                                   //  I will give a error "The modifier 'public' is not valid for this item"
         //{
         //    Console.WriteLine("Hi inside M method of Interface I2");
         //}

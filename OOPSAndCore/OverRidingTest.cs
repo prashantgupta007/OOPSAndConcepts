@@ -8,14 +8,15 @@ namespace OOPSAndCore
 
     class OverRidingTest
     {
-        public static void Main1()
+        public static void Main()
         {
-            var obj = new { city = "New York" };
-            Console.Write(obj.city);
-            dynamic obj1 = new { city = "New York 2" };
-            Console.Write(obj1.city);
-            //Console.WriteLine(20 + 45 + "A");
-            //Console.WriteLine("A" + 20 + 45);
+            //var obj = new { city = "New York" };
+            //Console.WriteLine(obj.city); // New York
+            //dynamic obj1 = new { city = "New York 2" };
+            //Console.WriteLine(obj1.city); // New York 2
+            //Console.WriteLine(20 + 45 + "A"); // 65A
+            //Console.WriteLine("A" + 20 + 45); // A2045
+            //Console.WriteLine(20 + "A" + 45); // 20A45
             //int hoogtePlaatjes = 900;
             //int breedtePlaatjes = 600;
             //double verHs = (hoogtePlaatjes / breedtePlaatjes);
@@ -44,6 +45,7 @@ namespace OOPSAndCore
             Console.WriteLine("Parent-Child: " + objParentChild.GetTypeWithoutOverRiding());    // this one will call to Parent class method GetTypeWithoutOverRiding()
             Console.WriteLine("Parent-Child: " + objParentChild.GetTypeWithOverRiding());       // this one will call to Child class method GetTypeWithOverRiding()
             Console.WriteLine("Parent-Child: " + objParentChild.StopOverRiding());
+            //Console.WriteLine("Parent-Child: " + objParentChild.OnlyChildMethod());           // this one will give compilation method that class doesn't contain any definition for OnlyChildMethod
             Console.WriteLine("Parent-Child Class Ends Here\n");
 
             //Parent objParentChildofChild = new ChildOfChild();      // It will call all three level constructers i.e. Parent, Child & then ChildOfChild class constructors
@@ -52,7 +54,7 @@ namespace OOPSAndCore
             //Console.WriteLine("Parent-Child: " + objParentChildofChild.StopOverRiding());
             //Console.WriteLine("Parent-ChildofChild Class Ends Here\n");
 
-            //ChildOfChild objChildOfChild = new ChildOfChild();      // It will call all three level constructers i.e. Parent, Child & then ChildOfChild class constructors
+            ChildOfChild objChildOfChild = new ChildOfChild();      // It will call all three level constructers i.e. Parent, Child & then ChildOfChild class constructors
             //Console.WriteLine("ChildOfChild: " + objChildOfChild.GetTypeWithoutOverRiding());
             //Console.WriteLine("ChildOfChild: " + objChildOfChild.GetTypeWithOverRiding());
             //Console.WriteLine("ChildOfChild: " + objChildOfChild.StopOverRiding());   // this one will call to child class method StopOverRiding()
@@ -137,6 +139,11 @@ namespace OOPSAndCore
         //}
 
         public override sealed string StopOverRiding()
+        {
+            return "Inside Child Class With OverRiding for Sealed function";
+        }
+
+        public string OnlyChildMethod()
         {
             return "Inside Child Class With OverRiding for Sealed function";
         }
