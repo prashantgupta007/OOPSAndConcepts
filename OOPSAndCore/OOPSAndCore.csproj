@@ -25,6 +25,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -35,10 +36,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,8 +56,11 @@
     <Compile Include="EventBasedProgramming.cs" />
     <Compile Include="LinqTest.cs" />
     <Compile Include="MultithreadingTest.cs" />
+    <Compile Include="Org\Accolite.cs" />
     <Compile Include="Org\Amazon.cs" />
     <Compile Include="ArrayOperations.cs" />
+    <Compile Include="Org\Amazon2.cs" />
+    <Compile Include="Org\Embibe.cs" />
     <Compile Include="Org\MicroSoft.cs" />
     <Compile Include="MyCustomException.cs" />
     <Compile Include="OuterInnerClass.cs" />
@@ -73,10 +82,12 @@
     <Compile Include="StaticTest.cs" />
     <Compile Include="StringBasedTest.cs" />
     <Compile Include="OverRidingTest.cs" />
+    <Compile Include="Test.cs" />
     <Compile Include="TryCatchTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
