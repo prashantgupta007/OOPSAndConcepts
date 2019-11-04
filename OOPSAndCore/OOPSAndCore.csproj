@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractTest.cs" />
+    <Compile Include="EventBasedProgramming.cs" />
     <Compile Include="LinqTest.cs" />
     <Compile Include="Org\Amazon.cs" />
     <Compile Include="ArrayOperations.cs" />

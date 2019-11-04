@@ -8,7 +8,7 @@ namespace OOPSAndCore
 
     class OverRidingTest
     {
-        public static void Main()
+        public static void Main1()
         {
             //var obj = new { city = "New York" };
             //Console.WriteLine(obj.city); // New York

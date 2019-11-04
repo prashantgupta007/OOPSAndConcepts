@@ -25,7 +25,31 @@ namespace OOPSAndCore
         }
     }
 
-    public  class NewClassTest1
+
+    //Potected and Private class inside name space will give compilation error 
+    //"Elements defined in a namespace cannot be explicitly declared as private, protected, protected internal, or private protected"
+    
+    //protected class ProtectedClass
+    //{ }
+
+    //private class PrivateClass
+    //{ }
+
+    //public class PublicClass { } this and below class declarations are correct
+    internal class InternalClass
+    {
+        protected class ProtectedClass { }
+
+        private class PrivateClass
+        {
+            protected string childtest()
+            {
+                return "This is the parent class function";
+            }
+        }
+    }
+
+    public class NewClassTest1
     {
         public NewClassTest1()
         {
