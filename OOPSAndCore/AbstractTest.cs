@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPSAndCore
 {
-    public class AbsTractTest
+    public class AbstractTest
     {
         public static void Main1()
         {

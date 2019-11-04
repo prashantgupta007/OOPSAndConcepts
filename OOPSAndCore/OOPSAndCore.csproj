@@ -49,6 +49,7 @@
     <Compile Include="AbstractTest.cs" />
     <Compile Include="EventBasedProgramming.cs" />
     <Compile Include="LinqTest.cs" />
+    <Compile Include="MultithreadingTest.cs" />
     <Compile Include="Org\Amazon.cs" />
     <Compile Include="ArrayOperations.cs" />
     <Compile Include="Org\MicroSoft.cs" />
