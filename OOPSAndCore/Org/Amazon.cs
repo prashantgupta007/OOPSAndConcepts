@@ -117,6 +117,31 @@ namespace OOPSAndCore
             }
             return (history.Count == 0 ? 1 : 0);
         }
+
+        //Find Max depth of JSON Object
+        public static int minMovement(string input1)
+        {
+            var result = 0;
+            char[] openingParanthesis = { '[', '{' };
+            //char[] closingParanthesis = {']', '}'};
+
+            if (input1.Length == 0)
+            {
+                return 0;
+            }
+
+            foreach (char c in input1)
+            {
+                var index = Array.IndexOf(openingParanthesis, c);
+
+                if (index != -1)
+                {
+                    result++;
+                }
+            }
+
+            return result;
+        }
     }
 }
 

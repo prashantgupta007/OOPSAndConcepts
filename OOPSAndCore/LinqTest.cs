@@ -37,7 +37,7 @@ namespace OOPSAndCore
         };
 
 
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //LinqTest.JoinTest();
 
