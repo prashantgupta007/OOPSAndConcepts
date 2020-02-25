@@ -62,6 +62,7 @@
     <Compile Include="Org\Amazon.cs" />
     <Compile Include="ArrayOperations.cs" />
     <Compile Include="Org\Amazon2.cs" />
+    <Compile Include="Org\EagleView.cs" />
     <Compile Include="Org\Embibe.cs" />
     <Compile Include="Org\MicroSoft.cs" />
     <Compile Include="MyCustomException.cs" />
