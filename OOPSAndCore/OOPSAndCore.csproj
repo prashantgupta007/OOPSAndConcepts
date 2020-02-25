@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractTest.cs" />
+    <Compile Include="CommonTest.cs" />
+    <Compile Include="ConstructorTest.cs" />
     <Compile Include="EventBasedProgramming.cs" />
     <Compile Include="LinqTest.cs" />
     <Compile Include="MultithreadingTest.cs" />

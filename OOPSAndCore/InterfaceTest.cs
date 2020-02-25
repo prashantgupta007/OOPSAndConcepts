@@ -1,10 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace OOPSAndCore
 {
+    //internal interface InternalInterface      // This and below lines of code are same i.e.
+    interface IInternalInterface                 // default access specifier for interface, class & struct is internal
+    {
+        void M1();
+
+        //internal void M2();        // The modifier 'internal' is not valid for this item
+
+        //public void M3();         // The modifier 'public' is not valid for this item
+
+        //protected void M4();      // Compilation error: Target runtime doesn't support 'protected', 'protected internal',
+                                    //  or 'private protected' accessibility for a member of an interface.
+    }
+
+    public interface IPublicInterface
+    {
+        void M1();
+
+        //internal void M2();       // The modifier 'internal' is not valid for this item
+
+        //public void M3();         // The modifier 'public' is not valid for this item
+
+        //protected void M4();      // Compilation error: Target runtime doesn't support 'protected', 'protected internal',
+                                    //  or 'private protected' accessibility for a member of an interface.
+    }
+
     public class InterfaceTest : I1, I2, I3
     {
         //void M1()                          

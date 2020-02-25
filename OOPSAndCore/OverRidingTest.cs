@@ -66,6 +66,11 @@ namespace OOPSAndCore
 
     class Parent
     {
+        static Parent()
+        {
+            Console.WriteLine("Inside Parent Class STATIC Constructor");
+        }
+
         public Parent()
         {
             Console.WriteLine("Inside Parent Class Constructor");
@@ -108,6 +113,11 @@ namespace OOPSAndCore
 
     class Child : Parent
     {
+        static Child()
+        {
+            Console.WriteLine("Inside Child Class STATIC Constructor");
+        }
+
         public Child()
         {
             Console.WriteLine("Inside Child Class Constructor");
@@ -151,6 +161,11 @@ namespace OOPSAndCore
 
     class ChildOfChild : Child
     {
+        static ChildOfChild()
+        {
+            Console.WriteLine("Inside ChildOfChild Class STATIC Constructor");
+        }
+
         public ChildOfChild()
         {
             Console.WriteLine("Inside ChildOfChild Class Constructor");
