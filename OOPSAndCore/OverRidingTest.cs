@@ -10,18 +10,6 @@ namespace OOPSAndCore
     {
         public static void Main1()
         {
-            //var obj = new { city = "New York" };
-            //Console.WriteLine(obj.city); // New York
-            //dynamic obj1 = new { city = "New York 2" };
-            //Console.WriteLine(obj1.city); // New York 2
-            //Console.WriteLine(20 + 45 + "A"); // 65A
-            //Console.WriteLine("A" + 20 + 45); // A2045
-            //Console.WriteLine(20 + "A" + 45); // 20A45
-            //int hoogtePlaatjes = 900;
-            //int breedtePlaatjes = 600;
-            //double verHs = (hoogtePlaatjes / breedtePlaatjes);
-
-
             //Parent oParent = new Parent();
             //Parent oParentChild = new Child();
             //Child oChild = new Child();

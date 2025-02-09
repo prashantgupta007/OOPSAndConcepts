@@ -117,7 +117,14 @@ namespace OOPSAndCore
             System.Console.WriteLine("12345 ".GetType());
 
             Console.ReadLine();
+
+            var employeeSkill = new List<EmployeeSkill>();
+            var result = employeeSkill.Where(e=> e.Skill.Count(s => s.Value >= 5) >= 3);
         }
     }
-    
+
+    public class EmployeeSkill
+    {
+        public Dictionary<string, int> Skill { get; set; }
+    }
 }

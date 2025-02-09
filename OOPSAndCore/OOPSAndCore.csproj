@@ -53,21 +53,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractTest.cs" />
+    <Compile Include="CandyDistribution.cs" />
+    <Compile Include="CommonDivisorOfString.cs" />
     <Compile Include="CommonTest.cs" />
     <Compile Include="ConstructorTest.cs" />
+    <Compile Include="ContainerWithMostWater.cs" />
     <Compile Include="EventBasedProgramming.cs" />
     <Compile Include="LinqTest.cs" />
+    <Compile Include="MergeWordCharactersAlternately.cs" />
+    <Compile Include="MinStepToClimbSteps.cs" />
     <Compile Include="MultithreadingTest.cs" />
     <Compile Include="Org\Accolite.cs" />
     <Compile Include="Org\Amazon.cs" />
     <Compile Include="ArrayOperations.cs" />
     <Compile Include="Org\Amazon2.cs" />
+    <Compile Include="Org\BiValue.cs" />
+    <Compile Include="Org\Chubb.cs" />
     <Compile Include="Org\EagleView.cs" />
     <Compile Include="Org\Embibe.cs" />
     <Compile Include="Org\MicroSoft.cs" />
     <Compile Include="MyCustomException.cs" />
     <Compile Include="OuterInnerClass.cs" />
     <Compile Include="PrimeNumber.cs" />
+    <Compile Include="ReverseString.cs" />
     <Compile Include="SortingTest.cs" />
     <Compile Include="ClassTest.cs" />
     <Compile Include="Org\Common.cs" />

@@ -10,7 +10,7 @@ namespace OOPSAndCore.Org
     {
         static bool IsPronicNo(int n)
         {
-            int sqrt = (int)(Math.Sqrt(n));
+            int sqrt = Convert.ToInt32(Math.Sqrt(n));
 
             if (sqrt * (sqrt + 1) == n)
                 return true;
@@ -18,21 +18,19 @@ namespace OOPSAndCore.Org
                 return false;
         }
 
-        static int CountPronic()
+        static int CountPronic(int A, int B)
         {
-            int A = 6;
-            int B = 20;
             var counter = 0;
-            for (int n = A; n <= B; n++)
-            {
-                if (IsPronicNo(n) == true)
+            if ((A <= B) && (A >= 1 && A <= 10000000))
+                for (int n = A; n <= B; n++)
                 {
-                    Console.Write("YES");
-                    counter++;
+                    if (IsPronicNo(n))
+                    {
+                        counter++;
+                    }
                 }
-                else
-                    Console.Write("NO");
-            }
+
+            Console.Write($"Total Pronic numbers: {counter}");
 
             return counter;
         }
@@ -40,9 +38,53 @@ namespace OOPSAndCore.Org
         // Driver Code 
         public static void Main1()
         {
-            //CountPronic();
+            //CountPronic(21, 1000000000);
             //GetStatbility();
-            GetDeletionCost();
+            //GetDeletionCost();
+            CountSubArrayWithSumZero();
+
+            Console.ReadKey();
+        }
+
+        static int CountSubArrayWithSumZero(int[] A, int startIndex)
+        {
+            var result = 0;
+            int sum = 0;
+            for (int i = startIndex; i < A.Length; i++)
+            {
+                sum += A[i];
+                break;
+            }
+
+            return result;
+        }
+        static int CountSubArrayWithSumZero()
+        {
+            //int[] A = { 1, 0, -1 };
+            int[] A = { 10000, -2, 3, 0, 4, -7 };
+
+            if (A.Distinct().All(a => a == 0) || A.Distinct().Any(a => a < -10000 || a > 10000))
+            {
+                Console.WriteLine("Wrong input");
+                return -1;
+            }
+                
+
+            var counter = 0;
+            for (int i = 0; i < A.Length; i++)
+            {
+                var sum = 0;
+                for (int j = i; j < A.Length; j++)
+                {
+                    sum += A[j];
+                    if (sum == 0)
+                    {
+                        counter++;
+                    }
+                }
+            }
+            Console.WriteLine($"Result is {counter}");
+            return counter;
         }
 
         public static int GetDeletionCost()
@@ -51,8 +93,8 @@ namespace OOPSAndCore.Org
             //var S = "abccbd";
             //int[] c = { 0, 1, 2, 3, 4, 5 };
             var S = "aaaa";
-            int[] C = { 3, 4, 5,6 };
-            
+            int[] C = { 3, 4, 5, 6 };
+
             if (S.Length != C.Length)
                 result = 0;
             for (int i = 0; i < S.Length - 1; i++)

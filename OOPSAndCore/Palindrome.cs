@@ -7,7 +7,7 @@ namespace OOPSAndCore
 {
     class Palindrome
     {
-        public static void Main(string[] args)
+        public static void Main1(string[] args)
         {
             Console.Write("Enter a String: ");
             string inputString = Console.ReadLine();
